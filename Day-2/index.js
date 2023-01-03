@@ -58,6 +58,38 @@ function checkAnagram(arr) {
     return false;
   }
 }
-checkAnagram(["Fried", "Fired"]);
-checkAnagram(["Silent", "Listen"]);
-checkAnagram(["rare", "Care"]);
+// checkAnagram(["Fried", "Fired"]);
+// checkAnagram(["Silent", "Listen"]);
+// checkAnagram(["rare", "Care"]);
+
+// 5. Swapping of 2 numbers with third variable
+
+function swap(a, b) {
+  let temp = a;
+  a = b;
+  b = temp;
+  console.log(a, b);
+  return [a, b];
+}
+
+swap(2, 66);
+
+// 6. Swapping of 2 numbers without third variable
+// Method 1
+function swapWithout(a, b) {
+  console.log(a + b - a, b + a - b);
+  return [a + b - a, b + a - b];
+}
+
+swapWithout(4, 3);
+
+// Method 2
+function swapWithout2(a, b) {
+  a = a + b;
+  b = a - b;
+  a = a - b;
+  console.log(a, b);
+  return [a, b];
+}
+
+swapWithout2(24, 9);
