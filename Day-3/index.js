@@ -24,31 +24,15 @@ function compareVals(p1, p2) {
 }
 function checkPalindrome2(str) {
   const strLength = str.length;
-  // for string with odd length
-  if (strLength % 2 !== 0) {
-    let mid = Math.floor(strLength / 2);
-    const [part1, part2] = [
-      str.split("").slice(0, mid).join(""),
-      str.split("").slice(-mid).join(""),
-    ];
-    const reversedPt2 = reverseString(part2);
-    const isPalindrome = compareVals(part1, reversedPt2);
-    return isPalindrome;
-  } else {
-    // for string with even length
-    let [mid1, mid2] = [Math.floor(strLength / 2), Math.ceil(strLength / 2)];
-    if (str[mid1] === str[mid2]) {
-      const [part1, part2] = [
-        str.split("").slice(0, mid1).join(""),
-        str.split("").slice(-mid2).join(""),
-      ];
-      const reversedPt2 = reverseString(part2);
-      const isPalindrome = compareVals(part1, reversedPt2);
-      return isPalindrome;
-    } else {
-      return false;
-    }
-  }
+  let mid = Math.floor(strLength / 2);
+  let mid2 = strLength % 2 === 0 ? mid + 1 : mid;
+  const [part1, part2] = [
+    str.split("").slice(0, mid).join(""),
+    str.split("").slice(-mid2).join(""),
+  ];
+  const reversedPt2 = reverseString(part2);
+  const isPalindrome = compareVals(part1, reversedPt2);
+  return isPalindrome;
 }
 // console.log(checkPalindrome2("rarel"));
 // console.log(checkPalindrome2("aclblca"));
