@@ -2,15 +2,19 @@
 function findIndex(arr, element) {
   return arr.indexOf(element);
 }
-console.log(findIndex([1, 2, 5, 32, 4], 5));
+// console.log(findIndex([1, 2, 5, 32, 4], 5));
 
 // Fibonacci Series (0,1,1,2,3,5,8,13....)
-// Day-7 Q-1 Fibonacci Series (0,1,1,2,3,5,8,13....) where keeping in array
+// printing the elements
 function fibonacci(limit) {
-  let arr = [0, 1];
-  for (let i = 2; i < limit; i++) {
-    arr.push(arr[i - 1] + arr[i - 2]);
+  let a = 0;
+  let b = 1;
+  let nextNum;
+  for (let i = 0; i < limit; i++) {
+    console.log(a);
+    nextNum = a + b;
+    a = b;
+    b = nextNum;
   }
-  return arr;
 }
-console.log(fibonacci(8));
+console.log(fibonacci(20));
