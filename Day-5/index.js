@@ -2,12 +2,7 @@
 function findFirstPair(arr) {
   let pairs = [];
   arr.forEach((item1, i) => {
-    let pairArr =
-      i === 0
-        ? arr.slice(1)
-        : i === arr.length - 1
-        ? arr.slice(0, arr.length - 2)
-        : [...arr.slice(0, i), ...arr.slice(i + 1)];
+    let pairArr = i === 0 ? arr.slice(1) : i === arr.length - 1 ? arr.slice(0, arr.length - 2) : [...arr.slice(0, i), ...arr.slice(i + 1)];
 
     // console.log(pairArr);
     pairArr.forEach((item2) => {
@@ -17,23 +12,16 @@ function findFirstPair(arr) {
       }
     });
   });
-  console.log(
-    `\nFind largest pair in: ${JSON.stringify(arr)} without indexing\nResult: `
-  );
+  console.log(`\nFind first pair whose sum is 0 without indexing in: ${JSON.stringify(arr)} without indexing\nResult: `);
   return pairs[0];
 }
-console.log(findFirstPair([1, 2, 4, -2, -1, 6]));
+console.log(findFirstPair([2, 4, -2, -1, 6]));
 
 // 2. To find a first pair from a number array whose sum is zero using indexing
 function findFirstPair2(arr) {
   let pairs = [];
   for (let i = 0; i < arr.length; i++) {
-    let pairArr =
-      i === 0
-        ? arr.slice(1)
-        : i === arr.length - 1
-        ? arr.slice(0, arr.length - 2)
-        : [...arr.slice(0, i), ...arr.slice(i + 1)];
+    let pairArr = i === 0 ? arr.slice(1) : i === arr.length - 1 ? arr.slice(0, arr.length - 2) : [...arr.slice(0, i), ...arr.slice(i + 1)];
 
     // console.log(pairArr);
     for (let j = 0; j < pairArr.length; j++) {
@@ -43,9 +31,7 @@ function findFirstPair2(arr) {
       }
     }
   }
-  console.log(
-    `\nFind first pair whose sum is 0 in: ${JSON.stringify(arr)}\nResult: `
-  );
+  console.log(`\nFind first pair whose sum is 0 with indexing in: ${JSON.stringify(arr)}\nResult: `);
   return pairs[0];
 }
 console.log(findFirstPair2([1, 2, 4, -2, -1, 6]));
@@ -57,12 +43,7 @@ function findLargestPair(arr) {
   let pair = [];
   let sum = 0;
   for (let i = 0; i < arr.length; i++) {
-    let pairArr =
-      i === 0
-        ? arr.slice(1)
-        : i === arr.length - 1
-        ? arr.slice(0, arr.length - 2)
-        : [...arr.slice(0, i), ...arr.slice(i + 1)];
+    let pairArr = i === 0 ? arr.slice(1) : i === arr.length - 1 ? arr.slice(0, arr.length - 2) : [...arr.slice(0, i), ...arr.slice(i + 1)];
 
     // console.log(pairArr);
     for (let j = 0; j < pairArr.length; j++) {

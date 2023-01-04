@@ -2,10 +2,11 @@
 
 function checkPalindrome(str) {
   const lowerCaseStr = str.toLowerCase();
+  console.log(`\nIs ${str} a palindrome? `);
   return lowerCaseStr === lowerCaseStr.split("").reverse().join("");
 }
 
-// console.log(checkPalindrome("omo"));
+console.log(checkPalindrome("omo"));
 // console.log(checkPalindrome("wowoWo"));
 
 // 2. To check the string or number is palindrome or not( ex: 121,madam,anna) using diving length by 2 and then comparing
@@ -26,16 +27,14 @@ function checkPalindrome2(str) {
   const strLength = str.length;
   let mid = Math.floor(strLength / 2);
   let mid2 = strLength % 2 === 0 ? mid + 1 : mid;
-  const [part1, part2] = [
-    str.split("").slice(0, mid).join(""),
-    str.split("").slice(-mid2).join(""),
-  ];
+  const [part1, part2] = [str.split("").slice(0, mid).join(""), str.split("").slice(-mid2).join("")];
   const reversedPt2 = reverseString(part2);
   const isPalindrome = compareVals(part1, reversedPt2);
+  console.log(`\nIs ${str} a palindrome? `);
   return isPalindrome;
 }
-// console.log(checkPalindrome2("rarel"));
-// console.log(checkPalindrome2("aclblca"));
+console.log(checkPalindrome2("rarel"));
+console.log(checkPalindrome2("aclblca"));
 // console.log(checkPalindrome2("aclbaca"));
 // console.log(checkPalindrome2("abba"));
 // console.log(checkPalindrome2("aclsca"));
@@ -71,10 +70,13 @@ function findLongestWord(str) {
       longestWord = word;
     }
   }
+  console.log("\nWithout Indexing");
+  console.log(`The longest word in string "${str}":`);
+
   return longestWord;
 }
 
-console.log(findLongestWord("Hello my name is Fabeha suppaaaaa chamchi?"));
+console.log(findLongestWord("Hello my name is Fabeha!"));
 
 // 4. To find longest word from a string using functions
 
@@ -86,6 +88,8 @@ function findLongestWord2(str) {
       longestWord = item;
     }
   });
+  console.log("\nWith Indexing");
+  console.log(`The longest word in string "${str}":`);
   return longestWord;
 }
-console.log(findLongestWord2("Hello my name is Fabeha supa chamchi?"));
+console.log(findLongestWord2("Hello are you supa chamchi?"));

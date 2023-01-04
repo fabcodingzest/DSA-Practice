@@ -11,7 +11,7 @@ function reverseIndWords(str) {
   return reversedArr.join(" ");
 }
 
-// reverseIndWords("Hello how are you?");
+reverseIndWords("Hello how are you?");
 
 // 2. String reverse without using inbult function
 function reverseWithoutFunc(str) {
