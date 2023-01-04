@@ -1,4 +1,4 @@
-// To find a first pair from a number array whose sum is zero
+// 1. To find a first pair from a number array whose sum is zero
 function findFirstPair(arr) {
   let pairs = [];
   arr.forEach((item1, i) => {
@@ -17,11 +17,14 @@ function findFirstPair(arr) {
       }
     });
   });
+  console.log(
+    `\nFind largest pair in: ${JSON.stringify(arr)} without indexing\nResult: `
+  );
   return pairs[0];
 }
-// console.log(findFirstPair([1, 2, 4, -2, -1, 6]));
+console.log(findFirstPair([1, 2, 4, -2, -1, 6]));
 
-// To find a first pair from a number array whose sum is zero using indexing
+// 2. To find a first pair from a number array whose sum is zero using indexing
 function findFirstPair2(arr) {
   let pairs = [];
   for (let i = 0; i < arr.length; i++) {
@@ -40,11 +43,14 @@ function findFirstPair2(arr) {
       }
     }
   }
+  console.log(
+    `\nFind first pair whose sum is 0 in: ${JSON.stringify(arr)}\nResult: `
+  );
   return pairs[0];
 }
 console.log(findFirstPair2([1, 2, 4, -2, -1, 6]));
 
-// To find the largest pair of the 2 elements using indexing with unsorted elements
+// 3. To find the largest pair of the 2 elements using indexing with unsorted elements
 // Day - 6 Q - 1 :To find the largest pair of the 2 elements using indexing with sorted elements
 
 function findLargestPair(arr) {
@@ -67,8 +73,9 @@ function findLargestPair(arr) {
       }
     }
   }
+  console.log(`\nFind largest pair in: ${JSON.stringify(arr)}\nResult: `);
   return { pair, sum };
 }
 console.log(findLargestPair([1, 2, 4, 6]));
-console.log(findLargestPair([-10, -7, -2, -1, 39]));
-console.log(findLargestPair([-10, -7, -2, -1, 2, 3]));
+// console.log(findLargestPair([-10, -7, -2, -1, 39]));
+// console.log(findLargestPair([-10, -7, -2, -1, 2, 3]));

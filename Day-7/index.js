@@ -24,12 +24,16 @@ function findNumAndAdd(arr) {
   const part2OfArr =
     missingIndex === arr.length - 1 ? arr.slice(-1) : arr.slice(missingIndex);
   const newArr = [...arr.slice(0, missingIndex), missingNum, ...part2OfArr];
+  console.log(`Find missing number in ${JSON.stringify(arr)}`);
+  console.log(`Missing Number found: ${missingNum}`);
   return newArr;
 }
 
-// console.log(findNumAndAdd([2, 3, 4, 6, 7]));
-// console.log(findNumAndAdd([4, 5, 7]));
-// console.log(findNumAndAdd([2, 4, 5, 6]));
+console.log(
+  `Updated Array: ${JSON.stringify(findNumAndAdd([2, 3, 4, 6, 7]))}\n`
+);
+// console.log(`Updated Array: ${JSON.stringify(findNumAndAdd([4, 5, 7]))}\n`);
+// console.log(`Updated Array: ${JSON.stringify(findNumAndAdd([2, 4, 5, 6]))}\n`);
 
 // 3. Find the missing number from an array
 function findNum(arr) {
@@ -42,9 +46,10 @@ function findNum(arr) {
       }
     }
   });
+  console.log(`Find missing number in ${JSON.stringify(arr)}`);
   return missingNum;
 }
 
-// console.log(findNum([2, 3, 4, 6, 7]));
-// console.log(findNum([2, 3, 4, 6, 7]));
-// console.log(findNum([2, 4, 5, 6, 7]));
+console.log(`Missing Number: ${JSON.stringify(findNum([2, 3, 4, 6, 7]))}\n`);
+// console.log(`Missing Number: ${JSON.stringify(findNum([4, 5, 7]))}\n`);
+// console.log(`Missing Number: ${JSON.stringify(findNum([2, 4, 5, 6]))}\n`);
