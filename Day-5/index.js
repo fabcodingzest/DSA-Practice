@@ -45,6 +45,8 @@ function findFirstPair2(arr) {
 console.log(findFirstPair2([1, 2, 4, -2, -1, 6]));
 
 // To find the largest pair of the 2 elements using indexing with unsorted elements
+// Day - 6 Q - 1 :To find the largest pair of the 2 elements using indexing with sorted elements
+
 function findLargestPair(arr) {
   let pair = [];
   let sum = 0;
@@ -67,4 +69,6 @@ function findLargestPair(arr) {
   }
   return { pair, sum };
 }
-console.log(findLargestPair([1, 2, 4, -2, -1, 6]));
+console.log(findLargestPair([1, 2, 4, 6]));
+console.log(findLargestPair([-10, -7, -2, -1, 39]));
+console.log(findLargestPair([-10, -7, -2, -1, 2, 3]));
