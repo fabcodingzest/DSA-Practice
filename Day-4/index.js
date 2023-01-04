@@ -7,9 +7,13 @@ function findLongestWord(str) {
       longestWord = arr[i];
     }
   }
+  console.log(`Find Longest Word from "${str}"`);
+
   return longestWord;
 }
-// console.log(findLongestWord("Hello my name is Fabeha supa chamchi?"));
+console.log(
+  `Result: ${findLongestWord("Hello my name is Fabeha supa chamchi?")}\n`
+);
 
 // 2. To find longest common string from array of strings
 function longestCommonStr(arr) {
@@ -27,9 +31,10 @@ function longestCommonStr(arr) {
       word = longestCommonStr;
     }
   }
+  console.log(`Find Longest Common Word from ${JSON.stringify(arr)}`);
   return longestCommonStr;
 }
-// console.log(longestCommonStr(["ab", "fab", "ab", "new"]));
+console.log(`Result: ${longestCommonStr(["ab", "fab", "ab", "new"])}\n`);
 
 // 3. To find vowels and its count in a given string
 function findVowelsCount(str) {
@@ -40,10 +45,11 @@ function findVowelsCount(str) {
       vowelCount[item] += 1;
     }
   });
+  console.log(`Find Vowel count in "${str}"`);
   return vowelCount;
 }
-// console.log(findVowelsCount("Fabeha"));
-// console.log(findVowelsCount("aeiijkfevqwoi"));
+console.log(`Result: ${JSON.stringify(findVowelsCount("Fabeha"))}\n`);
+// console.log(`Result: ${JSON.stringify(findVowelsCount("aeiijkfevqwoi"))}\n`);
 
 // 4. To find character occurance from the string
 function findCharNums(str) {
@@ -60,7 +66,7 @@ function findCharNums(str) {
   strArr.forEach((item) => {
     charTracker[item] += 1;
   });
+  console.log(`Find Char count in "${str}"`);
   return charTracker;
 }
-
-console.log(findCharNums("aeiijkfevqwoi"));
+console.log(`Result: ${JSON.stringify(findCharNums("aeiijevqwoi"),null,2)}\n`);
